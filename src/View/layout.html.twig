@@ -1,0 +1,15 @@
+{# src/View/layout.html.twig #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ name }}{% endblock %}</title>
+    <link rel="icon" href="/assets/images/favicon.png">
+</head>
+<body>
+    {% include "Items/navbar.html.twig" %}
+
+    {% block content %}{{ name }}{% endblock %}
+</body>
+</html>
