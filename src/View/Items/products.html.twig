@@ -4,13 +4,15 @@
 {% block title %}{{ parent() }} - Products{% endblock %}
 
 {% block content %}
-
-    <h1>Product List of {{ parent() }}</h1>
-
-    <ul>
-        {% for product in products %}
-            <li>{{ product }}</li>
-        {% endfor %}
-    </ul>
-
+    <main class="overflow-hidden">
+        <section class="mt-10 flex justify-center">
+            <h1 class="text-4xl lg:text-5xl leading-tight font-bold text-black mb-6">Product List of {{ parent() }}</h1>
+        </section>
+    
+        <ul class="mt-10 flex justify-around">
+            {% for product in products %}
+            <a href="/details.php?productName={{ product }}">{{ product }}</a>
+            {% endfor %}
+        </ul>
+    </main>
 {% endblock %}

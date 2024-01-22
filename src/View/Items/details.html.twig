@@ -1,0 +1,15 @@
+{# src/View/Items/details.html.twig #}
+{% extends "layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Details{% endblock %}
+
+{% block content %}
+    <main class="overflow-hidden">
+        <section class="mt-10 flex justify-center">
+            <h1 class="text-4xl lg:text-5xl leading-tight font-bold text-black mb-6">Details Page {{ productName }}</h1>
+        </section>
+        <section class="mt-5 flex justify-center">
+            <p>This is the details page for the product {{ productName }}</p>
+        </section>
+    </main>
+{% endblock %}
